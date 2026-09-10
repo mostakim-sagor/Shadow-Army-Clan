@@ -3,6 +3,7 @@
   "trailingSlash": false,
   "installCommand": "echo 'No dependencies required'",
   "buildCommand": "echo 'No build step required'",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/src/index.html" },
     { "source": "/style.css", "destination": "/src/style.css" },

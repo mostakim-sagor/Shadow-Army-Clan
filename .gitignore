@@ -20,6 +20,11 @@ node_modules
 .conversation
 .c9/
 *.launch
+.agents/
+.agents
+.git/
+.git
+.replit
 .settings/
 *.sublime-workspace
 
