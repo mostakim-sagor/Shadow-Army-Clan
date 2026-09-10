@@ -1,0 +1,26 @@
+[build]
+  publish = "."
+
+# information.js already lives at the project root, so it is served
+# natively at /information.js with no redirect needed. Only the /src
+# assets need short, stable URLs mapped to them.
+
+[[redirects]]
+  from = "/"
+  to = "/src/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/style.css"
+  to = "/src/style.css"
+  status = 200
+
+[[redirects]]
+  from = "/settings.js"
+  to = "/src/settings.js"
+  status = 200
+
+[[redirects]]
+  from = "/shadow.png"
+  to = "/src/shadow.png"
+  status = 200
