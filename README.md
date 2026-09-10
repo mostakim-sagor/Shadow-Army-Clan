@@ -28,6 +28,7 @@ Clan tag: **#2CG0GJCCC**
 SHADOW-ARMY/
 │
 ├── index.js            # Dependency-free Node.js static server
+├── index.html          # Vercel root entrypoint
 ├── information.js      # Single source of truth for clan info & links
 ├── vercel.json          # Vercel routing config
 ├── netlify.toml         # Netlify routing config
