@@ -6,6 +6,7 @@
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/src/index.html" },
+    { "source": "/~", "destination": "/src/index.html" },
     { "source": "/style.css", "destination": "/src/style.css" },
     { "source": "/settings.js", "destination": "/src/settings.js" },
     { "source": "/shadow.png", "destination": "/src/shadow.png" }

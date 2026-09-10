@@ -3,16 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/src/index.html" />
     <title>SHADOW - ARMY !</title>
   </head>
   <body>
     <p>
       Loading SHADOW - ARMY !...
-      <a href="/src/index.html">Open the website</a>
+      <a href="/">Open the website</a>
     </p>
     <script>
-      window.location.replace("/src/index.html");
+      fetch("/src/index.html", { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Website page could not be loaded");
+          return response.text();
+        })
+        .then(function (html) {
+          document.open();
+          document.write(html);
+          document.close();
+        })
+        .catch(function () {
+          document.body.innerHTML =
+            "<p>Website is temporarily unavailable. Please refresh the page.</p>";
+        });
     </script>
   </body>
 </html>
