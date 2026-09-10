@@ -90,14 +90,14 @@ The repository ships with a placeholder emblem in `src/shadow.png` so the site w
 
 ## Vercel deployment guide
 
-This project is a static site with no build step, which Vercel supports directly (the included `vercel.json` maps clean URLs like `/style.css` to their real files under `src/`).
+This project is a static site with no dependencies or build step, which Vercel supports directly. The included `vercel.json` explicitly skips dependency installation and the build command, then maps clean URLs like `/style.css` to their real files under `src/`.
 
 1. Push this project to a GitHub repository.
 2. Go to [vercel.com](https://vercel.com) and sign in.
 3. Click **Add New → Project** and import your GitHub repository.
 4. In the project configuration screen:
    - **Framework Preset:** "Other" (no framework detected — that's expected)
-   - **Build Command:** leave empty
+    - **Build Command:** leave empty (the repository config already skips it)
    - **Output Directory:** leave empty (the repository root)
 5. Click **Deploy**.
 6. Once the build finishes, open the generated `*.vercel.app` domain to view the live site.
