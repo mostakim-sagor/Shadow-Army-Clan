@@ -38,7 +38,7 @@
     <header class="site-header">
       <div class="site-header__inner">
         <div class="site-header__logo">
-          <img src="/shadow.png" alt="SHADOW - ARMY ! clan emblem" />
+          <img src="/shadow.png" alt="SHADOW - ARMY !" />
         </div>
         <span class="site-header__name" id="headerClanName">&nbsp;</span>
       </div>
@@ -52,7 +52,7 @@
           <div class="emblem__halo"></div>
           <div class="emblem__frame" id="emblemFrame">
             <div class="emblem__ring">
-              <img src="/shadow.png" alt="SHADOW - ARMY ! clan emblem" />
+              <img src="/shadow.png" alt="SHADOW - ARMY !" />
             </div>
           </div>
         </div>
@@ -61,9 +61,9 @@
 
         <div class="tagpill">
           <span class="tagpill__value" id="clanTagValue">&nbsp;</span>
-          <button class="tagpill__copy" id="copyTagBtn" type="button" aria-label="Copy clan tag">
+          <button class="tagpill__copy" id="copyTagBtn" type="button" aria-label="Copy">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            <span>Copy tag</span>
+            <span>Copy</span>
           </button>
         </div>
 
@@ -113,7 +113,7 @@
   <!-- Copy toast -->
   <div class="toast" id="toast" role="status" aria-live="polite">
     <span class="toast__dot"></span>
-    <span id="toastMessage">Clan tag copied!</span>
+    <span id="toastMessage">copied!</span>
   </div>
 
   <!-- Profile modal -->
@@ -124,7 +124,7 @@
       <h2 class="modal-card__name" id="modalName"></h2>
       <p class="modal-card__desc" id="modalDesc"></p>
       <div class="modal-card__actions">
-        <a class="btn btn--primary" id="modalViewProfile" href="#" target="_blank" rel="noopener noreferrer">View profile</a>
+        <a class="btn btn--primary" id="modalViewProfile" href="#" target="_blank" rel="noopener noreferrer">Join</a>
         <button class="btn btn--ghost" id="modalClose" type="button">Close</button>
       </div>
     </div>
@@ -218,7 +218,7 @@
 
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(tag).then(function () {
-              showToast("✓ Clan tag copied!");
+              showToast("copied!");
             }).catch(function () {
               showToast("Couldn't copy — long-press to select instead");
             });
@@ -231,7 +231,7 @@
             temp.select();
             try {
               document.execCommand("copy");
-              showToast("✓ Clan tag copied!");
+              showToast("copied!");
             } catch (err) {
               showToast("Couldn't copy — long-press to select instead");
             }
